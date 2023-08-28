@@ -18,6 +18,10 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">    
     <!-- CSS LINKS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -34,21 +38,24 @@
     <!-- OBJECTIVE -->
     <section class="quistion section-padding pb-0" id="Objective" style="display: flex;">
         <div class="container">
+            <div class="quistion-card col-lg-12 col-12" style="text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="mb-4 h2-titel">
+                    <span>Online Stress Survey<br>
+                        <h5>Answer the following questions</h5>
+                    </span>
+                </h2>
+            </div>
             <div class="row">
-                <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="100">
-                    <h2 class="mb-4 h2-titel">
-                        <span>Online Stress Survey<br>
-                            <h4>Answer the following questions</h4>
-                        </span>
-                    </h2>
-                </div>
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>What is your Name ?(if you want)</h3>
-                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    <h4>What is your Name ?(if you want)</h4>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" aria-label="Small"
+                            aria-describedby="inputGroup-sizing-sm">
+                    </div>
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>In which class do you study in ?</h3>
+                    <h4>In which class do you study in ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
@@ -103,40 +110,45 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel rested ?</h3>
-                    <div class="quistion-card col-sm-10" data-aos="fade-up">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios8"
-                                value="option8">
-                            <label class="form-check-label" for="gridRadios8">
-                                Almost
-                            </label>
+                    <h4>Do you feel rested ?</h4>
+                    <div class="quistion-card col-sm-10 position-relative" style="height: 145px;" data-aos="fade-up">
+                        <div class="position-absolute">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios8"
+                                    value="option8">
+                                <label class="form-check-label" for="gridRadios8">
+                                    Almost
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios9"
+                                    value="option9">
+                                <label class="form-check-label" for="gridRadios9">
+                                    Sometimes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios10"
+                                    value="option10">
+                                <label class="form-check-label" for="gridRadios10">
+                                    Never
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios9"
-                                value="option9">
-                            <label class="form-check-label" for="gridRadios9">
-                                Sometimes
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios10"
-                                value="option10">
-                            <label class="form-check-label" for="gridRadios10">
-                                Never
-                            </label>
+                        <div class="position-absolute gif border">
+                            <img src="image/rested.gif" alt="">
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel that too many demands are being made on you ?</h3>
+                    <h4>Do you feel that too many demands are being made on you ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios11"
                                 value="option11">
-                            <label class="form-check-label" for="gridRadios11">
-                                Almost
+                                <label class="form-check-label" for="gridRadios11">
+                                    Almost
                             </label>
                         </div>
                         <div class="form-check">
@@ -148,7 +160,7 @@
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios13"
-                                value="option13">
+                            value="option13">
                             <label class="form-check-label" for="gridRadios13">
                                 Never
                             </label>
@@ -157,7 +169,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Are you feeling irritated ?</h3>
+                    <h4>Are you feeling irritated ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios14"
@@ -175,16 +187,19 @@
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios16"
-                                value="option16">
+                            value="option16">
                             <label class="form-check-label" for="gridRadios16">
                                 Never
                             </label>
+                        </div>
+                        <div class="position-absolute gif border">
+                            <img src="image/irritated.gif" alt="">
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel lonely or isolated ?</h3>
+                    <h4>Do you feel lonely or isolated ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios17"
@@ -211,7 +226,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you find yourselves in situations of conflicts ?</h3>
+                    <h4>Do you find yourselves in situations of conflicts ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios20"
@@ -238,7 +253,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you do things you really like ?</h3>
+                    <h4>Do you do things you really like ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios23"
@@ -265,7 +280,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel tired ?</h3>
+                    <h4>Do you feel tired ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios26"
@@ -292,7 +307,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel you may not manage to attain your goals ?</h3>
+                    <h4>Do you feel you may not manage to attain your goals ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios29"
@@ -319,7 +334,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel calm ?</h3>
+                    <h4>Do you feel calm ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios32"
@@ -346,7 +361,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do You have too many decisions to make ?</h3>
+                    <h4>Do You have too many decisions to make ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios35"
@@ -373,7 +388,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel frustrated ?</h3>
+                    <h4>Do you feel frustrated ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios38"
@@ -400,7 +415,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Are you full of energy ?</h3>
+                    <h4>Are you full of energy ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios41"
@@ -427,7 +442,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do You feel tense ?</h3>
+                    <h4>Do You feel tense ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios44"
@@ -454,7 +469,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do your problems seem to be piling up ?</h3>
+                    <h4>Do your problems seem to be piling up ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios47"
@@ -481,7 +496,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel you are in a hurry ?</h3>
+                    <h4>Do you feel you are in a hurry ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios50"
@@ -508,7 +523,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel safe and protected ?</h3>
+                    <h4>Do you feel safe and protected ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios53"
@@ -535,7 +550,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you have too many worries ?</h3>
+                    <h4>Do you have too many worries ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios56"
@@ -562,7 +577,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Are you under pressure from other people ?</h3>
+                    <h4>Are you under pressure from other people ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios58"
@@ -589,7 +604,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel discouraged ?</h3>
+                    <h4>Do you feel discouraged ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios61"
@@ -616,7 +631,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you enjoy your life ?</h3>
+                    <h4>Do you enjoy your life ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios64"
@@ -643,7 +658,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Are you afraid for your future ?</h3>
+                    <h4>Are you afraid for your future ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios67"
@@ -670,7 +685,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you do things that you don't want to but you have to</h3>
+                    <h4>Do you do things that you don't want to but you have to</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios70"
@@ -697,7 +712,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel criticized or judged ?</h3>
+                    <h4>Do you feel criticized or judged ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios72"
@@ -724,7 +739,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Are you lighthearted ?</h3>
+                    <h4>Are you lighthearted ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios75"
@@ -751,7 +766,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel mentally exhausted ?</h3>
+                    <h4>Do you feel mentally exhausted ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios78"
@@ -778,7 +793,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you have trouble relaxing ?</h3>
+                    <h4>Do you have trouble relaxing ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios81"
@@ -805,7 +820,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you feel loaded down with responsibility ?</h3>
+                    <h4>Do you feel loaded down with responsibility ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios84"
@@ -832,7 +847,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Do you have enough time for yourself ?</h3>
+                    <h4>Do you have enough time for yourself ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios87"
@@ -859,7 +874,7 @@
                 </div>
 
                 <div class="col-lg-12 col-12" data-aos="fade-down" data-aos-delay="200">
-                    <h3>Do you feel under pressure from deadlines ?</h3>
+                    <h4>Do you feel under pressure from deadlines ?</h4>
                     <div class="quistion-card col-sm-10">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios90"
@@ -893,15 +908,20 @@
         </div>
     </section>
 
+    <!-- Back on top -->
+    <button type="button" class="btn btn-danger" id="btn-back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
     <!-- Footer -->
-    <footer class="site-footer">
+    <!-- <footer class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-12 col-12">
-                    <h3 class="text-white" data-aos="fade-up" data-aos-delay="100">Common Research and Technology
+                    <h4 class="text-white" data-aos="fade-up" data-aos-delay="100">Common Research and Technology
                         Development Hub
                         <strong style="color:red">(CRTDH)</strong> on Affordable Healthcare
-                    </h3>
+                    </h4>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
                     <h4 class="my-4">Contact Info</h4>
@@ -945,7 +965,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- SCRIPTS -->
     <script src="js/jquery.min.js"></script>
@@ -954,12 +974,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
-    <!-- <script src="js/activeTab.js"></script> -->
-    <script>
-        $(".nav-link").on("click", function () {
-            $(".nav-link").addClass("active");
-        })
-    </script>
 </body>
 
 

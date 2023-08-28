@@ -1,69 +1,39 @@
 
 $(function () {
-
-  // MENU
-  $('.nav-link').on('click', function () {
-    $(".navbar-collapse").collapse('hide');
-  });
-
-
   // AOS ANIMATION
   AOS.init({
     disable: 'mobile',
     duration: 800,
     anchorPlacement: 'center-bottom'
   });
-
-
-  // SMOOTH SCROLL
-  $(function () {
-    $('.nav-link').on('click', function (event) {
-      var $anchor = $(this);
-      $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top - 0
-      }, 1000);
-      event.preventDefault();
-    });
-  });
-
-
-  // PROJECT SLIDE
-  $('#project-slide').owlCarousel({
-    loop: true,
-    // center: true,
-    autoplayHoverPause: false,
-    autoplay: true,
-    margin: 30,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 3,
-      }
-    }
-  });
-  // hero-image
-
-  $('#hero-image').owlCarousel({
-    loop: true,
-    // center: true,
-    autoplayHoverPause: false,
-    autoplay: true,
-    margin: 0,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 1,
-      }
-    }
-  });
-
 });
+
+// Back on top
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 
 
