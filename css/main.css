@@ -231,11 +231,12 @@ a:focus {
 
 /* question Card */
 .question-card {
-  background: #0f2f86;
+  background: #030d99;
   border-radius: 10px;
   margin-bottom: 20px;
   overflow: hidden;
   padding: 10px;
+  box-shadow: 0 2px 25px rgba(10, 10, 10, 0.5);
 }
 
 .form-check-input {
@@ -263,9 +264,42 @@ img{
   width: 200px;
   height: 100px;
 }
-.form-control{
-  font-family: 'Kalam', cursive;
+.container-fluid{
+  margin-top: 10%;
+}
+.container{
+  width: 80dvh;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.3);
+}
+.login-form{
+  padding: 15px;
+}
+.form-group{
+  padding: 15px;
+  align-items: center;
+}
+.form-group input{
+  /* font-family: 'Kalam', cursive; */
   font-size: 18px;
+  font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.form-group input:focus{
+  border-color: #333;
+}
+.gender{
+  padding: 15px;
+  color: #747474;
 }
 /* Back on top */
 /* #btn-back-to-top {
