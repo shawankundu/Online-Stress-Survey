@@ -7,12 +7,6 @@ $result = $conn->query($sql);
 $data = array();
 while ($row = mysqli_fetch_assoc($result)) {
   $data[] = $row['answer'];
-  // echo"
-  // <tr>
-  // <td>" . $_SESSION['id'] . "</td>
-  // <td>" . $row['qusetion_no'] . "</td>
-  // <td>" . $row['answer'] . "</td>
-  // </tr>";
 }
 
 $counts = array_count_values($data);
@@ -29,12 +23,6 @@ if($almost==0){
   if($never==0){
     $never=0;
   }
-
-// echo"
-// <tr>
-// 	<td><h1>Total = </h1></td>
-// 	<td><h1>".array_sum($data)."</h1></td>
-// </tr>"
 ?>
 
 <!DOCTYPE html>
