@@ -1,3 +1,45 @@
+<?php
+$showError = false;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include '_db_con.php';
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    if (empty($email)) {
+        header("Location: index.html?error=User Name is required");
+        exit();
+    } else if (empty($password)) {
+        header("Location: index.html?error=Password is required");
+        exit();
+    } else {
+        $sql = "select * from registration_user where email = '$email' AND password = '$password' AND id";
+        $result = mysqli_query($conn, $sql);
+        $num = mysqli_num_rows($result);
+        if ($num == 1) {
+            $login = true;
+            $row = mysqli_fetch_assoc($result);
+            if ($row['email'] == $email && $row['password'] == $password) {
+                session_start();
+                $_SESSION['usr_loggedin'] = true;
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['name'] = $row['name'];
+                $_SESSION['id'] = $row['id'];
+                $exist_id = $_SESSION['id'];
+                // if exam already done
+                $exist_usr = "SELECT student_id FROM `answer` where student_id = '" . $exist_id . "' ";
+                $sql = mysqli_query($conn, $exist_usr);
+                $num_existROws = mysqli_num_rows($sql);
+                if ($num_existROws > 0) {
+                    header("location: result.php");
+                } else {
+                    header("location: page1.php");
+                }
+            }
+        } else {
+            $showError = true;
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +81,7 @@
 <body id="home" class="body">
     <div class="container-fluid d-flex justify-content-center">
         <div class="container border">
-            <form class="login-form" action="login.php" method="post">
+            <form class="login-form" action="index.php" method="post">
                 <h1>Login</h1>
                 <div class="form-group">
                     <input type="email" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
@@ -48,6 +90,16 @@
                     <input type="password" id="exampleInputPassword1" name="password" placeholder="Password" required>
                 </div>
 
+                <?php
+                if ($showError) {
+                    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Invaid Credentials </strong> Please check email and password.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>';
+                }
+                ?>
                 <div class="d-flex justify-content-between pb-1">
                     <a class="page-link" href="signup.php">Signup</a>
                     <button type="submit" class="page-link">Login</button>
@@ -65,4 +117,5 @@
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
 </body>
+
 </html>

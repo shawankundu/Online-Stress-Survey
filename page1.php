@@ -46,7 +46,7 @@ session_start();
                         <h2 class="mb-4 h2-titel">
                             <span>Online Stress Survey<br>
                                 <h5>Answer the following questions</h5>
-                                <h2>Hello <strong><?php echo $_SESSION['name'] ?></strong> </h2>
+                                <h2>Hello <strong><?php echo ucwords($_SESSION['name']) ?></strong> </h2>
                             </span>
                         </h2>
                     </div>

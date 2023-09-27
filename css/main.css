@@ -118,7 +118,7 @@ p {
   line-height: 1.5em;
 }
 span{
-  color: #ffffff;
+  color: #000000;
 }
 
 b,
@@ -301,9 +301,6 @@ img{
   padding: 10px;
   color: #747474;
 }
-
-
-
 /* Back on top */
 /* #btn-back-to-top {
   position: fixed;

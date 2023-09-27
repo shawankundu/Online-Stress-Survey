@@ -64,7 +64,7 @@ if ($never == 0) {
           <div class="navbar-nav-right p-3 d-flex justify-content-between align-items-center">
             <div class="github-button">
               <strong>
-                <?php echo $_SESSION['name'] ?>
+                <?php echo ucwords($_SESSION['name']) ?>
               </strong>
             </div>
             <a class="page-link" href="logout.php">logout</a>

@@ -2,9 +2,17 @@
 $showError = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include '_db_con.php';
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+
+    function validate($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
+
+    $name = validate($_POST['name']);
+    $email = validate($_POST['email']);
+    $password = validate($_POST['password']);
     $age = $_POST['age'];
     $class = $_POST['class'];
     $gender = $_POST['gender'];
@@ -20,14 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $execval = $stmt->execute();
         $stmt->close();
         $conn->close();
-        header("location: index.html");
+        header("location: index.php");
     }
 }
 ?>
-<script>
-    alert("<?php echo $message; ?>");
-    window.location.href = "index.html";
-</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -101,20 +105,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </div>
 
-
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <button type="button" class="close" style="" data-dismis="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <strong>Error!</strong> ' . $showError . '.
-                </div>
-
-
-
+                <?php
+                if($showError){
+                  echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>Error!</strong> '.$showError.'.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>';
+                }
+                ?>
+                
                 <div class="d-flex justify-content-between py-4">
-                    <a class="page-link" href="index.html">Signin</a>
+                    <a class="page-link" href="index.php">Signin</a>
                     <button type="submit" class="page-link">Register</button>
-               </div>
+                </div>
             </form>
         </div>
     </div>
