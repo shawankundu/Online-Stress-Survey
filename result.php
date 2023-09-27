@@ -2,7 +2,7 @@
 include '_db_con.php';
 session_start();
 $id = $_SESSION['id'];
-$sql = "SELECT test.student_id, test.qusetion_no, test.answer FROM `test` WHERE student_id = '" . $id . "'";
+$sql = "SELECT answer.student_id, answer.qusetion_no, answer.answer FROM `answer` WHERE student_id = '" . $id . "'";
 $result = $conn->query($sql);
 $data = array();
 while ($row = mysqli_fetch_assoc($result)) {
