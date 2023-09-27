@@ -53,9 +53,10 @@ session_start();
                     </div>
                 </div>
                 <form action="form_action.php" method="post">
-                <input type="hidden" name="question_page" value="7">
+                    <input type="hidden" name="question_page" value="7">
                     <input type="hidden" name="id" id="id" value="<?php echo $_SESSION['id'] ?>">
                     <input type="hidden" name="student_name" id="student_name" value="<?php echo $_SESSION['name'] ?>">
+
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Do you enjoy your life ?</h4>
                         <div class="question-card col-sm-10">
@@ -127,6 +128,7 @@ session_start();
                             </div>
                         </div>
                     </div>
+
                     <div class="col-sm-10 d-grid mb-3 gap-2 d-flex justify-content-between">
                         <a class="page-link" href="page6.php">Previous</a>
                         <button type="submit" class="page-link">Next</button>
@@ -143,8 +145,5 @@ session_start();
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
 </body>
-
-
-<!-- Mirrored from www.crtdh.iitkgp.ac.in/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Jun 2023 08:17:13 GMT -->
 
 </html>

@@ -10,7 +10,6 @@ function insert_data( $id, $q_name, $q_answer)
         $conn->close();
     }
 }
-
 function d($data, $return =true)
 {
     echo "<pre>";
@@ -18,5 +17,3 @@ function d($data, $return =true)
     if($return)
     die;
 }
-
-?>

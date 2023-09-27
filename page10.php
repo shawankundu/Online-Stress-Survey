@@ -15,7 +15,6 @@ session_start();
     <link rel="mask-icon" href="images/logo/favicon/safari-pinned-tab.svg" color="#9a14e7">
     <meta name="msapplication-TileColor" content="#9f00a7">
     <meta name="theme-color" content="#ffffff">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="description" content="">
@@ -32,10 +31,8 @@ session_start();
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body id="home">
@@ -53,9 +50,10 @@ session_start();
                     </div>
                 </div>
                 <form action="form_action.php" method="post">
-                <input type="hidden" name="question_page" value="10">
+                    <input type="hidden" name="question_page" value="10">
                     <input type="hidden" name="id" id="id" value="<?php echo $_SESSION['id'] ?>">
                     <input type="hidden" name="student_name" id="student_name" value="<?php echo $_SESSION['name'] ?>">
+
                     <div class="col-lg-12 col-12" data-aos="fade-down" data-aos-delay="200">
                         <h4>Do you feel under pressure from deadlines ?</h4>
                         <div class="question-card col-sm-10">
@@ -79,6 +77,7 @@ session_start();
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Do you feel rested ?</h4>
                         <div class="question-card col-sm-10 position-relative" style="height: 145px;" data-aos="fade-up">
@@ -107,6 +106,7 @@ session_start();
                             </div>
                         </div>
                     </div>
+
                     <div class="col-sm-10 d-grid mb-3 gap-2 d-flex justify-content-between">
                         <a class="page-link" href="page9.html">Previous</a>
                         <button type="submit" class="page-link">Next</button>
@@ -123,8 +123,5 @@ session_start();
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
 </body>
-
-
-<!-- Mirrored from www.crtdh.iitkgp.ac.in/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Jun 2023 08:17:13 GMT -->
 
 </html>

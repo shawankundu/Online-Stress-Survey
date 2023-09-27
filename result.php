@@ -5,25 +5,25 @@ $id = $_SESSION['id'];
 $sql = "SELECT answer.student_id, answer.qusetion_no, answer.answer FROM `answer` WHERE student_id = '" . $id . "'";
 $result = $conn->query($sql);
 $data = array();
-while ($row = mysqli_fetch_assoc($result)) {
+while ($row =
+  mysqli_fetch_assoc($result)
+) {
   $data[] = $row['answer'];
 }
-
-$counts = array_count_values($data);
+$counts =
+  array_count_values($data);
 $almost = $counts['0'];
 $sometimes = $counts['1'];
 $never = $counts['-1'];
-
-if($almost==0){
+if ($almost == 0) {
   $almost = 0;
-  }
-  if($sometimes == 0){
-    $sometimes =0;
-  }
-  if($never==0){
-    $never=0;
-  }
-?>
+}
+if ($sometimes == 0) {
+  $sometimes = 0;
+}
+if ($never == 0) {
+  $never = 0;
+} ?>
 
 <!DOCTYPE html>
 
@@ -32,27 +32,18 @@ if($almost==0){
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
   <title>Online Stress Survey</title>
-
   <meta name="description" content="" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
-
   <!-- Core CSS -->
   <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
   <link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
   <link rel="stylesheet" href="assets/css/demo.css" />
-  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <!-- SCRIPTS -->
   <script src="assets/js/config.js"></script>
 </head>
 
@@ -65,16 +56,17 @@ if($almost==0){
         <!-- Navbar -->
         <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
           <div class="navbar-nav-left d-flex align-items-center" id="navbar-collapse">
-            <!-- Place this tag where you want the button to render. -->
             <!-- User -->
             <div class="avatar avatar-online">
               <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
             </div>
           </div>
           <div class="navbar-nav-right p-3 d-flex justify-content-between align-items-center">
-            <div class="github-button"><strong>
-              <?php echo $_SESSION['name'] ?>
-              </strong></div>
+            <div class="github-button">
+              <strong>
+                <?php echo $_SESSION['name'] ?>
+              </strong>
+            </div>
             <a class="page-link" href="logout.php">logout</a>
           </div>
         </nav>
@@ -89,13 +81,14 @@ if($almost==0){
                   <div class="card-header d-flex align-items-center justify-content-between pb-0">
                     <div class="card-title mb-0">
                       <h5 class="m-0 me-2">Answer Summery</h5>
-                      <!-- <small class="text-muted">42.82k Total Sales</small> -->
                     </div>
                   </div>
                   <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                       <div class="d-flex flex-column align-items-center gap-1">
-                        <h2 class="mb-2"><?php echo array_sum($data) ?></h2>
+                        <h2 class="mb-2">
+                          <?php echo array_sum($data) ?>
+                        </h2>
                         <span>Total Number</span>
                       </div>
                       <div id="orderStatisticsChart"></div>
@@ -108,10 +101,11 @@ if($almost==0){
                         <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                           <div class="me-2">
                             <h6 class="mb-0">Almost</h6>
-                            <!-- <small class="text-muted">Mobile, Earbuds, TV</small> -->
                           </div>
                           <div class="user-progress">
-                            <small class="fw-medium"><?php echo $almost ?></small>
+                            <small class="fw-medium">
+                              <?php echo $almost ?>
+                            </small>
                           </div>
                         </div>
                       </li>
@@ -124,7 +118,9 @@ if($almost==0){
                             <h6 class="mb-0">Sometimes</h6>
                           </div>
                           <div class="user-progress">
-                            <small class="fw-medium"><?php echo $sometimes ?></small>
+                            <small class="fw-medium">
+                              <?php echo $sometimes ?>
+                            </small>
                           </div>
                         </div>
                       </li>
@@ -137,7 +133,9 @@ if($almost==0){
                             <h6 class="mb-0">Never</h6>
                           </div>
                           <div class="user-progress">
-                            <small class="fw-medium"><?php echo $never ?></small>
+                            <small class="fw-medium">
+                              <?php echo $never ?>
+                            </small>
                           </div>
                         </div>
                       </li>
@@ -156,7 +154,7 @@ if($almost==0){
                 <script>
                   document.write(new Date().getFullYear());
                 </script>
-                , made with ❤️ by <strong></strong>
+                , made with ❤️ by Shawan <strong></strong>
               </div>
             </div>
           </footer>
@@ -170,21 +168,22 @@ if($almost==0){
     <!-- Overlay -->
     <div class="layout-overlay layout-menu-toggle"></div>
   </div>
-  <!-- / Layout wrapper -->
-  <!-- Vendors JS -->
-  <!-- <script src="assets/vendor/libs/apex-charts/apexcharts.js"></script> -->
-  <!-- Page JS -->
-  <!-- <script src="assets/js/dashboards-analytics.js"></script> -->
-  <!-- Place this tag in your head or just before your close body tag. -->
+  <!-- SCRIPTS -->
   <script>
-    let sometime = document.getElementsByClassName("user-progress").item(1).innerText;
-    let never = document.getElementsByClassName("user-progress").item(2).innerText;
+    let sometime = document
+      .getElementsByClassName("user-progress")
+      .item(1).innerText;
+    let never = document
+      .getElementsByClassName("user-progress")
+      .item(2).innerText;
 
     function a() {
-      let almost = document.getElementsByClassName("user-progress").item(0).innerText;
+      let almost = document
+        .getElementsByClassName("user-progress")
+        .item(0).innerText;
       return almost;
     }
-    console.log(a())
+    console.log(a());
   </script>
 </body>
 

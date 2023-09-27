@@ -9,6 +9,3 @@
     if(!$conn){
         echo "connecton field";
     }
-    
-    
-?>

@@ -15,7 +15,6 @@ session_start();
     <link rel="mask-icon" href="images/logo/favicon/safari-pinned-tab.svg" color="#9a14e7">
     <meta name="msapplication-TileColor" content="#9f00a7">
     <meta name="theme-color" content="#ffffff">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="description" content="">
@@ -35,7 +34,6 @@ session_start();
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body id="home">
@@ -55,9 +53,9 @@ session_start();
                 </div>
                 <form action="form_action.php" method="post">
                     <input type="hidden" name="id" id="id" value="<?php echo $_SESSION['id'] ?>">
-                    <input type="hidden" name="student_name" id="student_name" value="<?php echo $_SESSION['name'] ?>">              
-                    <!-- sajal -->
+                    <input type="hidden" name="student_name" id="student_name" value="<?php echo $_SESSION['name'] ?>">
                     <input type="hidden" name="question_page" value="1">
+
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Do you feel that too many demands are being made on you ?</h4>
                         <div class="question-card col-sm-10" role="group">
@@ -81,14 +79,11 @@ session_start();
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Are you feeling irritated ?</h4>
                         <div class="question-card col-sm-10">
                             <div class="form-check">
-                                 <!-- sajal -->
-                                 <!-- <input type="hidden" name="q_name" value="q2"> -->
-
-
                                 <input class="form-check-input" type="radio" name="q2" id="gridRadios14" value="0">
                                 <label class="form-check-label" for="gridRadios14">
                                     Almost
@@ -111,6 +106,7 @@ session_start();
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Do you feel lonely or isolated ?</h4>
                         <div class="question-card col-sm-10">
@@ -134,8 +130,8 @@ session_start();
                             </div>
                         </div>
                     </div>
+
                     <div class="col-sm-10 d-grid mb-3 gap-2 d-flex justify-content-end">
-                        <!-- <a class="page-link" href="page2.html">Next</a> -->
                         <button type="submit" class="page-link">Next</button>
                     </div>
                 </form>
@@ -150,8 +146,5 @@ session_start();
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
 </body>
-
-
-<!-- Mirrored from www.crtdh.iitkgp.ac.in/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Jun 2023 08:17:13 GMT -->
 
 </html>
