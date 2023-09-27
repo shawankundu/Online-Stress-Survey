@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="form-group d-flex justify-content-between">
                     <input type="number" placeholder="Age" name="age" autocomplete="age" required>
-                    <input type="number" placeholder="class" name="class" autocomplete="class" required>
+                    <input type="number" placeholder="Class" name="class" autocomplete="class" required>
                 </div>
 
                 <div class="gender d-flex justify-content-start">
