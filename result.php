@@ -1,29 +1,34 @@
 <?php
 include '_db_con.php';
+include 'functions.php';
 session_start();
 $id = $_SESSION['id'];
-$sql = "SELECT answer.student_id, answer.qusetion_no, answer.answer FROM `answer` WHERE student_id = '" . $id . "'";
+$sql = "SELECT answer.student_id, answer.qusetion_no, answer.answer, answer.question_opt FROM `answer` WHERE student_id = '" . $id . "'";
 $result = $conn->query($sql);
 $data = array();
-while ($row =
-  mysqli_fetch_assoc($result)
-) {
+while ($row = mysqli_fetch_assoc($result)) {
   $data[] = $row['answer'];
+  $data_opt[] = $row['question_opt'];
 }
-$counts =
-  array_count_values($data);
-$almost = $counts['0'];
-$sometimes = $counts['1'];
-$never = $counts['-1'];
-if ($almost == 0) {
-  $almost = 0;
-}
-if ($sometimes == 0) {
-  $sometimes = 0;
-}
-if ($never == 0) {
-  $never = 0;
-} ?>
+$sql_always = "SELECT answer.student_id, answer.qusetion_no, answer.answer, answer.question_opt FROM `answer` WHERE student_id = '" . $id . "' AND `question_opt` = 'always' ";
+$sql_sometimes = "SELECT answer.student_id, answer.qusetion_no, answer.answer, answer.question_opt FROM `answer` WHERE student_id = '" . $id . "' AND `question_opt` = 'sometimes' ";
+$sql_never = "SELECT answer.student_id, answer.qusetion_no, answer.answer, answer.question_opt FROM `answer` WHERE student_id = '" . $id . "' AND `question_opt` = 'never' ";
+$always = $conn->query($sql_always)->num_rows;
+$sometimes = $conn->query($sql_sometimes)->num_rows;
+$never = $conn->query($sql_never)->num_rows;
+
+$total = array_sum($data);
+$counts = array_count_values($data_opt);
+
+$stressLevel = 21;
+$category = categorizeStressLevel($stressLevel);
+$textColor = categorizeTextColor($stressLevel);
+$content = getCategoryContent($stressLevel);
+$imageURL = categorizeImage($stressLevel);
+
+// d($imageURL);
+
+?>
 
 <!DOCTYPE html>
 
@@ -78,18 +83,21 @@ if ($never == 0) {
               <!-- Order Statistics -->
               <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
                 <div class="card h-100">
-                  <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                  <div class="card-header d-flex align-items-center justify-content-center pb-0">
                     <div class="card-title mb-0">
                       <h5 class="m-0 me-2">Answer Summery</h5>
                     </div>
                   </div>
                   <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex justify-content-center align-items-center mb-3">
                       <div class="d-flex flex-column align-items-center gap-1">
                         <h2 class="mb-2">
-                          <?php echo array_sum($data) ?>
+                          <?php echo "<h2 style=\"color: $textColor;\"> $category</h2>";
+                          echo "<span style=\"text-align: center;\"> $content </span>";
+                          echo "<img style=\"text-align: center;\" src=\"$imageURL\" alt=\"$category\" width=\"300\" height=\"200\">";
+                          ?>
                         </h2>
-                        <span>Total Number</span>
+                        <br>
                       </div>
                       <div id="orderStatisticsChart"></div>
                     </div>
@@ -100,11 +108,11 @@ if ($never == 0) {
                         </div>
                         <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                           <div class="me-2">
-                            <h6 class="mb-0">Almost</h6>
+                            <h6 class="mb-0">Always</h6>
                           </div>
                           <div class="user-progress">
                             <small class="fw-medium">
-                              <?php echo $almost ?>
+                              <?php echo $always ?>
                             </small>
                           </div>
                         </div>
@@ -154,7 +162,7 @@ if ($never == 0) {
                 <script>
                   document.write(new Date().getFullYear());
                 </script>
-                , made with ❤️ by Shawan <strong></strong>
+                , by IIT KGP <strong></strong>
               </div>
             </div>
           </footer>
@@ -178,10 +186,10 @@ if ($never == 0) {
       .item(2).innerText;
 
     function a() {
-      let almost = document
+      let Always = document
         .getElementsByClassName("user-progress")
         .item(0).innerText;
-      return almost;
+      return Always;
     }
     console.log(a());
   </script>

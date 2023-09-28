@@ -58,19 +58,19 @@ session_start();
                         <h4>Do you have trouble relaxing ?</h4>
                         <div class="question-card col-sm-10">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q25" id="gridRadios81" value="0">
+                                <input class="form-check-input" type="radio" name="q25" id="gridRadios81" value="1,always">
                                 <label class="form-check-label" for="gridRadios81">
-                                    Almost
+                                    Always
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q25" id="gridRadios82" value="1">
+                                <input class="form-check-input" type="radio" name="q25" id="gridRadios82" value="0,sometimes">
                                 <label class="form-check-label" for="gridRadios82">
                                     Sometimes
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q25" id="gridRadios83" value="-1">
+                                <input class="form-check-input" type="radio" name="q25" id="gridRadios83" value="-1,never">
                                 <label class="form-check-label" for="gridRadios83">
                                     Never
                                 </label>
@@ -82,19 +82,19 @@ session_start();
                         <h4>Do you feel loaded down with responsibility ?</h4>
                         <div class="question-card col-sm-10">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q26" id="gridRadios84" value="0">
+                                <input class="form-check-input" type="radio" name="q26" id="gridRadios84" value="1,always">
                                 <label class="form-check-label" for="gridRadios84">
-                                    Almost
+                                    Always
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q26" id="gridRadios85" value="1">
+                                <input class="form-check-input" type="radio" name="q26" id="gridRadios85" value="0,sometimes">
                                 <label class="form-check-label" for="gridRadios85">
                                     Sometimes
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q26" id="gridRadios86" value="-1">
+                                <input class="form-check-input" type="radio" name="q26" id="gridRadios86" value="-1,never">
                                 <label class="form-check-label" for="gridRadios86">
                                     Never
                                 </label>
@@ -106,19 +106,19 @@ session_start();
                         <h4>Do you have enough time for yourself ?</h4>
                         <div class="question-card col-sm-10">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q27" id="gridRadios87" value="0">
+                                <input class="form-check-input" type="radio" name="q27" id="gridRadios87" value="-1,always">
                                 <label class="form-check-label" for="gridRadios87">
-                                    Almost
+                                    Always
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q27" id="gridRadios88" value="1">
+                                <input class="form-check-input" type="radio" name="q27" id="gridRadios88" value="0,sometimes">
                                 <label class="form-check-label" for="gridRadios88">
                                     Sometimes
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q27" id="gridRadios89" value="-1">
+                                <input class="form-check-input" type="radio" name="q27" id="gridRadios89" value="1,never">
                                 <label class="form-check-label" for="gridRadios89">
                                     Never
                                 </label>
