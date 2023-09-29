@@ -43,13 +43,13 @@ session_start();
                 <div class="col-lg-12 col-12" style="text-align: center;" data-aos="fade-up" data-aos-delay="100">
                     <div class="question-card col-sm-10">
                         <h2 class="mb-4 h2-titel">
-                            <span>Online Stress Survey<br>
+                            <span style="color: white;">Online Stress Survey<br>
                                 <h5>Answer the following questions</h5>
                             </span>
                         </h2>
                     </div>
                 </div>
-                <form action="form_action.php" method="post">
+                <form action="form_action.php" method="post" onsubmit="return validateForm()">
                     <input type="hidden" name="question_page" value="10">
                     <input type="hidden" name="id" id="id" value="<?php echo $_SESSION['id'] ?>">
                     <input type="hidden" name="student_name" id="student_name" value="<?php echo $_SESSION['name'] ?>">
@@ -80,8 +80,7 @@ session_start();
 
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Do you feel rested ?</h4>
-                        <div class="question-card col-sm-10 position-relative" style="height: 145px;" data-aos="fade-up">
-                            <div class="position-absolute">
+                        <div class="question-card col-sm-10">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="q29" id="gridRadios8" value="-1,always">
                                     <label class="form-check-label" for="gridRadios8">
@@ -100,7 +99,6 @@ session_start();
                                         Never
                                     </label>
                                 </div>
-                            </div>
                         </div>
                     </div>
 
@@ -119,6 +117,36 @@ session_start();
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        function validateForm() {
+            var group1RadioButtons = document.getElementsByName('q28');
+            var group2RadioButtons = document.getElementsByName('q29');
+
+            // Check if at least one option is selected in Group 1
+            var group1Selected = false;
+            for (var i = 0; i < group1RadioButtons.length; i++) {
+                if (group1RadioButtons[i].checked) {
+                    group1Selected = true;
+                    break;
+                }
+            }
+
+            // Check if at least one option is selected in Group 2
+            var group2Selected = false;
+            for (var i = 0; i < group2RadioButtons.length; i++) {
+                if (group2RadioButtons[i].checked) {
+                    group2Selected = true;
+                    break;
+                }
+            }
+
+            // Display an alert if either group is not selected
+            if (!group1Selected || !group2Selected) {
+                alert("Please select an option from each quistion.");
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>

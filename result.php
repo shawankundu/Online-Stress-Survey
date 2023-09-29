@@ -18,15 +18,12 @@ $sometimes = $conn->query($sql_sometimes)->num_rows;
 $never = $conn->query($sql_never)->num_rows;
 
 $total = array_sum($data);
-$counts = array_count_values($data_opt);
 
 $stressLevel = 21;
 $category = categorizeStressLevel($stressLevel);
 $textColor = categorizeTextColor($stressLevel);
 $content = getCategoryContent($stressLevel);
 $imageURL = categorizeImage($stressLevel);
-
-// d($imageURL);
 
 ?>
 

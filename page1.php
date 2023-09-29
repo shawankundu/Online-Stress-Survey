@@ -1,11 +1,5 @@
 <?php
 session_start();
-$value = $_POST['q1'];
-$value1 = $_POST['q2'];
-$value2 = $_POST['q3'];
-if (empty($value)) {
-    header("Location: page1.php?error=please select a option");
-}
 ?>
 
 <!DOCTYPE html>
@@ -50,14 +44,14 @@ if (empty($value)) {
                 <div class="col-lg-12 col-12" style="text-align: center;" data-aos="fade-up" data-aos-delay="100">
                     <div class="question-card col-sm-10">
                         <h2 class="mb-4 h2-titel">
-                            <span>Online Stress Survey<br>
+                            <span style="color: white;">Online Stress Survey<br>
                                 <h5>Answer the following questions</h5>
                                 <h2>Hello <strong><?php echo ucwords($_SESSION['name']) ?></strong> </h2>
                             </span>
                         </h2>
                     </div>
                 </div>
-                <form action="form_action.php" method="post">
+                <form action="form_action.php" method="post" onsubmit="return validateForm()">
                     <input type="hidden" name="id" id="id" value="<?php echo $_SESSION['id'] ?>">
                     <input type="hidden" name="student_name" id="student_name" value="<?php echo $_SESSION['name'] ?>">
                     <input type="hidden" name="question_page" value="1">
@@ -65,7 +59,7 @@ if (empty($value)) {
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Do you feel that too many demands are being made on you ?</h4>
                         <div class="question-card col-sm-10" role="group">
-                            <div class="form-check">
+                            <div class="form-check" require>
                                 <input class="form-check-input" type="radio" name="q1" id="gridRadios11" value="1,always">
                                 <label class="form-check-label" for="gridRadios11">
                                     Always
@@ -149,6 +143,46 @@ if (empty($value)) {
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        function validateForm() {
+            var group1RadioButtons = document.getElementsByName('q1');
+            var group2RadioButtons = document.getElementsByName('q2');
+            var group3RadioButtons = document.getElementsByName('q3');
+
+            // Check if at least one option is selected in Group 1
+            var group1Selected = false;
+            for (var i = 0; i < group1RadioButtons.length; i++) {
+                if (group1RadioButtons[i].checked) {
+                    group1Selected = true;
+                    break;
+                }
+            }
+
+            // Check if at least one option is selected in Group 2
+            var group2Selected = false;
+            for (var i = 0; i < group2RadioButtons.length; i++) {
+                if (group2RadioButtons[i].checked) {
+                    group2Selected = true;
+                    break;
+                }
+            }
+
+            // Check if at least one option is selected in Group 3
+            var group3Selected = false;
+            for (var i = 0; i < group3RadioButtons.length; i++) {
+                if (group3RadioButtons[i].checked) {
+                    group3Selected = true;
+                    break;
+                }
+            }
+
+            // Display an alert if either group is not selected
+            if (!group1Selected || !group2Selected || !group3Selected) {
+                alert("Please select an option from each quistion.");
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>
