@@ -56,72 +56,87 @@ session_start();
 
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Do you have too many worries ?</h4>
-                        <div class="question-card col-sm-10">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q16" id="gridRadios56" value="1,always">
-                                <label class="form-check-label" for="gridRadios56">
-                                    Always
-                                </label>
+                        <div class="question-card col-sm-10 position-relative" style="height: 145px;" role="group">
+                            <div class="position-absolute">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q16" id="gridRadios56" value="1,always">
+                                    <label class="form-check-label" for="gridRadios56">
+                                        Always
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q16" id="gridRadios94" value="0,sometimes">
+                                    <label class="form-check-label" for="gridRadios94">
+                                        Sometimes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q16" id="gridRadios57" value="-1,never">
+                                    <label class="form-check-label" for="gridRadios57">
+                                        Never
+                                    </label>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q16" id="gridRadios94" value="0,sometimes">
-                                <label class="form-check-label" for="gridRadios94">
-                                    Sometimes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q16" id="gridRadios57" value="-1,never">
-                                <label class="form-check-label" for="gridRadios57">
-                                    Never
-                                </label>
+                            <div class="position-absolute gif border">
+                                <img src="https://media.tenor.com/7_8VP1K16FkAAAAC/im-very-worried-zephplayz.gif" alt="">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Are you under pressure from other people ?</h4>
-                        <div class="question-card col-sm-10">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q17" id="gridRadios58" value="1,always">
-                                <label class="form-check-label" for="gridRadios58">
-                                    Always
-                                </label>
+                        <div class="question-card col-sm-10 position-relative" style="height: 145px;" role="group">
+                            <div class="position-absolute">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q17" id="gridRadios58" value="1,always">
+                                    <label class="form-check-label" for="gridRadios58">
+                                        Always
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q17" id="gridRadios59" value="0,sometimes">
+                                    <label class="form-check-label" for="gridRadios59">
+                                        Sometimes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q17" id="gridRadios60" value="-1,never">
+                                    <label class="form-check-label" for="gridRadios60">
+                                        Never
+                                    </label>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q17" id="gridRadios59" value="0,sometimes">
-                                <label class="form-check-label" for="gridRadios59">
-                                    Sometimes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q17" id="gridRadios60" value="-1,never">
-                                <label class="form-check-label" for="gridRadios60">
-                                    Never
-                                </label>
+                            <div class="position-absolute gif border">
+                                <img src="https://media.tenor.com/3Ecthe7RYJsAAAAC/thats-too-much-pressure-to-put-on-me-too-much-pressure.gif" alt="">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Do you feel discouraged ?</h4>
-                        <div class="question-card col-sm-10">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q18" id="gridRadios61" value="1,always">
-                                <label class="form-check-label" for="gridRadios61">
-                                    Always
-                                </label>
+                        <div class="question-card col-sm-10 position-relative" style="height: 145px;" role="group">
+                            <div class="position-absolute">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q18" id="gridRadios61" value="1,always">
+                                    <label class="form-check-label" for="gridRadios61">
+                                        Always
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q18" id="gridRadios62" value="0,sometimes">
+                                    <label class="form-check-label" for="gridRadios62">
+                                        Sometimes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q18" id="gridRadios63" value="-1,never">
+                                    <label class="form-check-label" for="gridRadios63">
+                                        Never
+                                    </label>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q18" id="gridRadios62" value="0,sometimes">
-                                <label class="form-check-label" for="gridRadios62">
-                                    Sometimes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q18" id="gridRadios63" value="-1,never">
-                                <label class="form-check-label" for="gridRadios63">
-                                    Never
-                                </label>
+                            <div class="position-absolute gif border">
+                                <img src="https://media.tenor.com/x6jZW1FTKFsAAAAC/facepalm-aliceinwonderland.gif" alt="">
                             </div>
                         </div>
                     </div>

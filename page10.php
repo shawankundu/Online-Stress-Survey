@@ -56,31 +56,37 @@ session_start();
 
                     <div class="col-lg-12 col-12" data-aos="fade-down" data-aos-delay="200">
                         <h4>Do you feel under pressure from deadlines ?</h4>
-                        <div class="question-card col-sm-10">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q28" id="gridRadios90" value="1,always">
-                                <label class="form-check-label" for="gridRadios90">
-                                    Always
-                                </label>
+                        <div class="question-card col-sm-10 position-relative" style="height: 145px;" role="group">
+                            <div class="position-absolute">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q28" id="gridRadios90" value="1,always">
+                                    <label class="form-check-label" for="gridRadios90">
+                                        Always
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q28" id="gridRadios91" value="0,sometimes">
+                                    <label class="form-check-label" for="gridRadios91">
+                                        Sometimes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q28" id="gridRadios92" value="-1,never">
+                                    <label class="form-check-label" for="gridRadios92">
+                                        Never
+                                    </label>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q28" id="gridRadios91" value="0,sometimes">
-                                <label class="form-check-label" for="gridRadios91">
-                                    Sometimes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q28" id="gridRadios92" value="-1,never">
-                                <label class="form-check-label" for="gridRadios92">
-                                    Never
-                                </label>
+                            <div class="position-absolute gif border">
+                                <img src="https://media.tenor.com/w5p8dTeVBHgAAAAC/solicy-deadline.gif" alt="">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="200">
                         <h4>Do you feel rested ?</h4>
-                        <div class="question-card col-sm-10">
+                        <div class="question-card col-sm-10 position-relative" style="height: 145px;" role="group">
+                            <div class="position-absolute">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="q29" id="gridRadios8" value="-1,always">
                                     <label class="form-check-label" for="gridRadios8">
@@ -99,6 +105,10 @@ session_start();
                                         Never
                                     </label>
                                 </div>
+                            </div>
+                            <div class="position-absolute gif border">
+                                <img src="https://media.tenor.com/zeHCbNZKLZQAAAAC/rested-well-rested.gif" alt="">
+                            </div>
                         </div>
                     </div>
 
