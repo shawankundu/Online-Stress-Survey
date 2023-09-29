@@ -57,7 +57,8 @@ function getCategoryContent($stressLevel)
     } elseif ($stressLevel > -10 && $stressLevel <= 10) {
         return "You're doing fine, but keep yourself cool."; // Normal Stress
     } elseif ($stressLevel > 10 && $stressLevel <= 20) {
-        return "Consider trying some yoga exercises to relax. Here are some <a href='https://www.example.com/yoga-links'>yoga links</a>."; // High Stress
+        return "Consider trying some yoga exercises to relax. Here are some 
+        <a href='https://healthshots.com/mind/mental-health/yoga-for-stress-relief-try-these-exercises-for-relaxation/'>yoga links</a>."; // High Stress
     } elseif ($stressLevel > 20 && $stressLevel <= 30) {
         return "It's recommended to consult a psychologist. You can visit this link 
         <p><a href= 'https://pib.gov.in/PressReleasePage.aspx?PRID=1652240#:~:text=The%20helpline%20operates%20in%20this,from%20any%20part%20of%20India'>
