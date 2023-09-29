@@ -71,13 +71,13 @@ function getCategoryContent($stressLevel)
 function categorizeImage($stressLevel)
 {
     if ($stressLevel >= -30 && $stressLevel <= -10) {
-        return "images/rested.gif"; // Image for Low Stress
+        return "images/smile.jpg"; // Image for Low Stress
     } elseif ($stressLevel > -10 && $stressLevel <= 10) {
-        return " "; // Image for Normal Stress
+        return "images/normal.png"; // Image for Normal Stress
     } elseif ($stressLevel > 10 && $stressLevel <= 20) {
-        return "high_stress.jpg"; // Image for High Stress
+        return "images/highstress.png"; // Image for High Stress
     } elseif ($stressLevel > 20 && $stressLevel <= 30) {
-        return "risky_stress.jpg"; // Image for Risky Level
+        return "images/riskylevel.png"; // Image for Risky Level
     } else {
         return "invalid_stress.jpg"; // Default Image for Invalid Stress Level
     }

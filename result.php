@@ -19,7 +19,7 @@ $never = $conn->query($sql_never)->num_rows;
 
 $total = array_sum($data);
 
-$stressLevel = 21;
+$stressLevel = $total;
 $category = categorizeStressLevel($stressLevel);
 $textColor = categorizeTextColor($stressLevel);
 $content = getCategoryContent($stressLevel);
@@ -91,7 +91,7 @@ $imageURL = categorizeImage($stressLevel);
                         <h2 class="mb-2">
                           <?php echo "<h2 style=\"color: $textColor;\"> $category</h2>";
                           echo "<span style=\"text-align: center;\"> $content </span>";
-                          echo "<img style=\"text-align: center;\" src=\"$imageURL\" alt=\"$category\" width=\"300\" height=\"200\">";
+                          echo "<img style=\"text-align: center; border-radius: 20px;\" src=\"$imageURL\" alt=\"$category\" width=\"300\" height=\"200\">";
                           ?>
                         </h2>
                         <br>
